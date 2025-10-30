@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hà Nội 12 Ngày Đêm (1972)</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  
+  <style>
+    /* Prevents flash of unstyled content (FOUC) before React loads */
+    body {
+      background-color: #0f172a; /* This corresponds to bg-slate-900 */
+    }
+    .leaflet-popup-content-wrapper {
+        background: #1e293b; /* bg-slate-800 */
+        color: #cbd5e1; /* text-slate-300 */
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(245, 158, 11, 0.3);
+        padding: 0;
+    }
+    .leaflet-popup-content {
+        margin: 0;
+        min-width: 300px;
+    }
+    .leaflet-popup-tip {
+        background: #1e293b;
+    }
+    .leaflet-popup-close-button {
+        color: #f59e0b !important;
+        font-size: 24px !important;
+        padding: 8px 12px !important;
+        font-weight: bold;
+        transition: all 0.2s;
+    }
+    .leaflet-popup-close-button:hover {
+        color: #fbbf24 !important;
+        transform: scale(1.1);
+    }
+    .leaflet-control-attribution a {
+        color: #94a3b8 !important; /* text-slate-400 */
+    }
+    /* Custom popup animation */
+    .custom-popup .leaflet-popup-content-wrapper {
+        animation: popupFadeIn 0.3s ease-out;
+    }
+    @keyframes popupFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* Scrollbar styling for popup content */
+    .leaflet-popup-content::-webkit-scrollbar {
+        width: 6px;
+    }
+    .leaflet-popup-content::-webkit-scrollbar-track {
+        background: #334155;
+        border-radius: 3px;
+    }
+    .leaflet-popup-content::-webkit-scrollbar-thumb {
+        background: #f59e0b;
+        border-radius: 3px;
+    }
+    .leaflet-popup-content::-webkit-scrollbar-thumb:hover {
+        background: #fbbf24;
+    }
+  </style>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    }
+  }
+  </script>
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script type="module" src="/index.tsx" defer></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
