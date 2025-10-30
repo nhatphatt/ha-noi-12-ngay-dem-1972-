@@ -42,13 +42,8 @@ const navButtons: { page: Page; label: string; description: string }[] = [
 const HomePage: React.FC<HomePageProps> = ({ navigateTo }) => {
   return (
     <div className="space-y-20">
-      <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-        <img
-          src="https://static-images.vnncdn.net/files/publish/2022/5/10/can-canh-buc-tranh-tuong-panorama-dien-bien-phu-hoan-thanh-1200-ngay-ad5e73d0a7114879bca49a43b1fbd3ee.jpg"
-          alt="Tranh panorama Điện Biên Phủ - Biểu tượng chiến thắng lịch sử"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 flex flex-col items-center justify-center text-center p-6">
+      <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl -z-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
           <div className="badge mb-4 pulse-glow">🎖️ CHIẾN THẮNG LỊCH SỬ</div>
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter drop-shadow-2xl mb-4 leading-tight">
             HÀ NỘI <span className="gradient-text">12 NGÀY ĐÊM</span>

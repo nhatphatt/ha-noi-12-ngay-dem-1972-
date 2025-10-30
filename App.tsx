@@ -57,12 +57,30 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 font-sans">
-      <Header navigateTo={navigateTo} currentPage={currentPage} />
-      <main className="container mx-auto px-4 py-12 md:py-20">
-        {renderPage()}
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 font-sans relative">
+      {/* Background Image */}
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage:
+            "url(https://images2.thanhnien.vn/Uploaded/hoangnam/2022_12_15/11d-4174.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      />
+      {/* Overlay for better text readability */}
+      <div className="fixed inset-0 z-0 bg-black/70" />
+
+      {/* Content */}
+      <div className="relative z-10">
+        <Header navigateTo={navigateTo} currentPage={currentPage} />
+        <main className="container mx-auto px-4 py-12 md:py-20">
+          {renderPage()}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
