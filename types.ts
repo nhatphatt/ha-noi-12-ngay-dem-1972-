@@ -6,4 +6,5 @@ export type Page =
   | 'HANOI'
   | 'ANALYSIS'
   | 'TOUR'
-  | 'LIBRARY';
+  | 'LIBRARY'
+  | 'GAME';

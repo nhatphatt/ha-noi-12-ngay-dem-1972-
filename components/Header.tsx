@@ -6,14 +6,19 @@ interface HeaderProps {
   currentPage: Page;
 }
 
-const navItems: { page: Page; label: string }[] = [
-  { page: "HOME", label: "Trang Chủ" },
-  { page: "CONTEXT", label: "Bối Cảnh" },
-  { page: "DIARY", label: "Nhật Ký" },
-  { page: "HANOI", label: "Hà Nội" },
-  { page: "ANALYSIS", label: "Giải Mã" },
-  { page: "TOUR", label: "Trải Nghiệm" },
-  { page: "LIBRARY", label: "Thư Viện" },
+const navItems: { page: Page; label: string; tooltip: string }[] = [
+  { page: "HOME", label: "Trang Chủ", tooltip: "Về trang chủ" },
+  { page: "CONTEXT", label: "Bối Cảnh", tooltip: "Tìm hiểu bối cảnh lịch sử" },
+  { page: "DIARY", label: "Nhật Ký", tooltip: "Nhật ký 12 ngày đêm" },
+  { page: "HANOI", label: "Hà Nội", tooltip: "Khám phá Hà Nội" },
+  { page: "ANALYSIS", label: "Giải Mã", tooltip: "Phân tích chiến dịch" },
+  { page: "TOUR", label: "Trải Nghiệm", tooltip: "Tour tham quan" },
+  { page: "LIBRARY", label: "Thư Viện", tooltip: "Thư viện tư liệu" },
+  {
+    page: "GAME",
+    label: "🎮 Mini Game",
+    tooltip: "Chơi game bắn máy bay B-52",
+  },
 ];
 
 const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {

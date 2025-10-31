@@ -9,6 +9,7 @@ import HanoiPage from "./pages/HanoiPage";
 import AnalysisPage from "./pages/AnalysisPage";
 import TourPage from "./pages/TourPage";
 import LibraryPage from "./pages/LibraryPage";
+import GamePage from "./pages/GamePage";
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>("HOME");
@@ -51,6 +52,8 @@ const App: React.FC = () => {
         return <TourPage />;
       case "LIBRARY":
         return <LibraryPage />;
+      case "GAME":
+        return <GamePage />;
       default:
         return <HomePage navigateTo={navigateTo} />;
     }
